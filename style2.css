@@ -1105,6 +1105,8 @@ mask-image: linear-gradient(to top, transparent 40%, #079097 80%) !important;
   p{
     color: #FEC7B4;
     opacity: 0;
+    width: 500px;
+    text-align: justify;
     padding-bottom: 10px;
     display: none;
     animation: fadeIn 1s ease-in-out forwards;
@@ -1114,7 +1116,7 @@ mask-image: linear-gradient(to top, transparent 40%, #079097 80%) !important;
   }
   video{
     margin-top: 70px;
-    width: 370px;
+    width: 70px;
     border-radius: 12px;
     display: none;
     display: none;
