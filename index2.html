@@ -1,0 +1,63 @@
+ <body>
+    <video id="myVideo"  controls controls width="640" height="360">
+      <source src="./kisum-look-into-my-eyes.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <style>
+      #myVideo {
+          display: none;
+          border-radius: 10px; /* Bo tròn viền video */
+            /* position: absolute; */
+            bottom: 0;
+            left: -100%; /* Đặt video bên trái màn hình ngoài vùng nhìn thấy */
+            transition: bottom 1s ease-in-out, left 1s ease-in-out; 
+      }
+      #myVideo.show {
+        bottom: 50px; /* Đặt video lên trên cùng */
+            left: 30%; 
+        }
+   </style>
+    <div class="wrapper">
+      <div class="loader">
+        <div class="cardHover">
+          <div class="inner one" style="--i: 1"></div>
+          <div class="inner two" style="--i: 1"></div>
+          <div class="inner three" style="--i: 1"></div>
+          <div class="box-heart">
+            <div class="heart"></div>
+          </div>
+        </div>
+      </div>
+     
+      <button id="myButton">Nhấn vào đây đi bạn</button>
+      <script>
+        var btn = document.getElementById("myButton");
+        var video = document.getElementById("myVideo");
+
+        btn.addEventListener("click", function() {
+            // Ẩn nút sau 5 giây và hiển thị video
+            setTimeout(function() {
+                btn.style.display = "none";
+                video.style.display = "block";
+                // Chạy video
+                video.play();
+            }, 1000);
+        });
+
+        // Lặp lại video khi kết thúc
+        video.addEventListener("ended", function() {
+            video.currentTime = 0; // Chuyển về thời điểm ban đầu
+            video.play(); // Phát lại video
+        });
+    </script>
+      <div class="content">
+        <i class="fa-solid fa-xmark"></i>
+        <h1>Gửi bé Mai ngứa đòn!</h1>
+        <p>
+          "💞Chúc mừng ngày 8/3! Chúc mừng bạn nhân ngày của phái đẹp! Chúc bạn luôn khỏe mạnh, hạnh phúc và thành công trong sự nghiệp. Hãy luôn giữ vững niềm tin và tinh thần lạc quan. Mong bạn luôn tươi cười và hạnh phúc trên mọi bước đường của cuộc sống. Chúc bạn có một ngày đặc biệt và tràn đầy niềm vui!. Nhớ ăn uống đẩy đủ chứ coi chừng tao 💞"
+        </p>
+      </div>
+   
+    </div>
+  </body> 
+    

@@ -33,7 +33,7 @@ body {
   width: 400px;
   height: 600px;
 }
-.loader {
+/* .loader {
   position: relative;
   width: 250px;
   height: 250px;
@@ -46,8 +46,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 0;
-}
+  bottom: 0;
+} */
 .box-heart {
   width: 100%;
   height: 100%;
@@ -235,4 +235,90 @@ button:hover p {
   100% {
     opacity: 1;
   }
+}
+var btn = document.querySelector("button");
+var closeBtn = document.querySelector(".fa-xmark");
+btn.addEventListener("mouseenter", () => {
+  btn.style.animation = "none";
+  setTimeout(() => {
+    btn.style.animation = "";
+  }, 3000);
+});
+
+button:hover {
+  animation: rotate 3s infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes heartBeat {
+  0% { transform: scale(1); }
+  25% { transform: scale(1.3); }
+  50% { transform: scale(1); }
+  75% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+.emoji {
+  font-size: 30px;
+  animation: heartBeat 2s infinite;
+  display: none;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Fireworks Animation */
+@keyframes fireworks {
+  0% { transform: scale(0.5); opacity: 0; }
+  50% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(0.5); opacity: 0; }
+}
+
+.firework {
+  position: fixed;
+  z-index: 1000;
+  display: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ffcc00;
+  animation: fireworks 1s ease-in-out;
+}
+
+/* Ẩn các nút điều khiển */
+video::-webkit-media-controls {
+  display: none !important;
+}
+
+video::-webkit-media-controls-panel {
+  display: none !important;
+}
+
+video::-webkit-media-controls-play-button,
+video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+}
+
+video::-webkit-media-controls-current-time-display,
+video::-webkit-media-controls-time-remaining-display,
+video::-webkit-media-controls-timeline,
+video::-webkit-media-controls-mute-button,
+video::-webkit-media-controls-volume-slider {
+  display: none !important;
+}
+
+/* Cắt video thành kích thước cụ thể */
+video {
+  width: 640px; /* Kích thước chiều rộng */
+  height: 360px; /* Kích thước chiều cao */
+  object-fit: cover; /* Cắt video */
 }

@@ -571,3 +571,22 @@ var VanillaTilt = (function () {
 
   return VanillaTilt;
 })();
+
+
+VanillaTilt.init(document.querySelector(".wrapper"), {
+  max: 25,
+  speed: 400,
+  glare: true,
+  "max-glare": 0.25,
+  gyroscopeMinAngleX: -45,
+});
+var btn = document.querySelector("button");
+var closeBtn = document.querySelector(".fa-xmark");
+btn.addEventListener("click", () => {
+  document.querySelector(".wrapper").classList.add("active");
+  btn.style.display = "none";
+});
+closeBtn.addEventListener("click", () => {
+  document.querySelector(".wrapper").classList.remove("active");
+  btn.style.display = "block";
+});
