@@ -1102,6 +1102,7 @@ mask-image: linear-gradient(to top, transparent 40%, #079097 80%) !important;
     font-size: 15px;
     color: 
   }
+ 
   p{
     color: #FEC7B4;
     opacity: 0;
@@ -1122,7 +1123,11 @@ mask-image: linear-gradient(to top, transparent 40%, #079097 80%) !important;
     display: none;
     animation: fadeIn 1s ease-in-out forwards;
   }
-
+  @media screen and (max-width: 600px) {
+    p {
+      width: 360px;
+    }
+  }
   @keyframes fadeIn {
     from {
         opacity: 0;
