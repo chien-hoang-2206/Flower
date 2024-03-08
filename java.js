@@ -12,16 +12,16 @@ setTimeout(function() {
 var video = document.getElementById("myVideo");
 
 // Chờ 20 giây trước khi hiển thị video
-setTimeout(function() {
-    video.style.display = "block"; // Hiển thị video
-    video.play(); // Tự động phát video
-}, 25000); // 20 giây
+// setTimeout(function() {
+//     video.style.display = "block"; // Hiển thị video
+//     video.play(); // Tự động phát video
+// }, 2000); // 20 giây
 
-// Lặp lại video khi kết thúc
-video.addEventListener('ended', function() {
-    this.currentTime = 0; // Quay lại thời điểm bắt đầu
-    this.play(); // Phát lại video
-}, false);
+// // Lặp lại video khi kết thúc
+// video.addEventListener('ended', function() {
+//     this.currentTime = 0; // Quay lại thời điểm bắt đầu
+//     this.play(); // Phát lại video
+// }, false);
 
 
 
