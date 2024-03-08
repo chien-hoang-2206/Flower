@@ -8,14 +8,14 @@ onload = () => {
   
 setTimeout(function() {
   document.getElementById("wish").style.display = "block";
-}, 1000); // 10 giây
+}, 8500); // 10 giây
 var video = document.getElementById("myVideo");
 
     // Hiển thị video sau 20 giây
     setTimeout(function() {
         video.style.display = "block";
         video.play();
-    }, 10000); // 20 giây
+    }, 23000); // 20 giây
 
     // Lặp lại video khi kết thúc
     video.addEventListener('ended', function() {
